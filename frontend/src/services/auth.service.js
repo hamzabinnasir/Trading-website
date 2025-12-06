@@ -1,7 +1,7 @@
 // src/services/auth.service.js
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:8080/api/auth/";
+const API_URL = "https://trading-website-tan.vercel.app/api/auth/";
 
 class AuthService {
   async login(username, password, invitationCode) {
@@ -39,7 +39,7 @@ class AuthService {
   // ✅ FIXED: Admin login method
   async adminLogin(username, password) {
     try {
-      const response = await axios.post("http://127.0.0.1:8080/api/admin/login", {
+      const response = await axios.post("https://trading-website-tan.vercel.app/api/admin/login", {
         username,
         password,
       });

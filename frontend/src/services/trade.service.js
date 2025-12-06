@@ -3,7 +3,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_BASE_URL = 'http://localhost:8080/api/';
+const API_BASE_URL = 'https://trading-website-tan.vercel.app/api/';
 
 class TradeService {
   // Create new trade

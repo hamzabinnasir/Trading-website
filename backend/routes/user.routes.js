@@ -2,8 +2,8 @@
 const { authJwt } = require("../app/middlewares");
 const controller = require("../app/controllers/user.controller");
 
-module.exports = function(app) {
-  app.use(function(req, res, next) {
+module.exports = function (app) {
+  app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
       "Access-Control-Allow-Headers",
@@ -11,7 +11,7 @@ module.exports = function(app) {
     );
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.header("Access-Control-Allow-Credentials", "true");
-    
+
     if (req.method === 'OPTIONS') {
       return res.status(200).end();
     }
@@ -22,10 +22,10 @@ module.exports = function(app) {
   app.get("/api/test/all", controller.allAccess);
 
   // --- AUTHENTICATED ROUTES ---
-  
+
   // User Board
   app.get("/api/test/user", [authJwt.verifyToken], controller.userBoard);
-  
+
   // Balance & Portfolio Routes
   app.get("/api/user/balance", [authJwt.verifyToken], controller.getUserBalance);
   app.get("/api/user/value", [authJwt.verifyToken], controller.getUserValue);

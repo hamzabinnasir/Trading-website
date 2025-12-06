@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_BASE_URL = 'http://localhost:8080/api/recharge';
+const API_BASE_URL = 'https://trading-website-tan.vercel.app/api/recharge';
 
 class RechargeService {
   // Create recharge request
@@ -25,21 +25,21 @@ class RechargeService {
 
   // Admin: Get all recharge requests
   getAllRecharges() {
-    return axios.get(`http://localhost:8080/api/admin/recharges`, {
+    return axios.get(`https://trading-website-tan.vercel.app/api/admin/recharges`, {
       headers: authHeader()
     });
   }
 
   // Admin: Approve recharge
   approveRecharge(rechargeId) {
-    return axios.post(`http://localhost:8080/api/admin/recharge/approve`, { rechargeId }, {
+    return axios.post(`https://trading-website-tan.vercel.app/api/admin/recharge/approve`, { rechargeId }, {
       headers: authHeader()
     });
   }
 
   // Admin: Reject recharge
   rejectRecharge(rechargeId) {
-    return axios.post(`http://localhost:8080/api/admin/recharge/reject`, { rechargeId }, {
+    return axios.post(`https://trading-website-tan.vercel.app/api/admin/recharge/reject`, { rechargeId }, {
       headers: authHeader()
     });
   }

@@ -2,7 +2,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_BASE_URL = 'http://localhost:8080/api/user/';
+const API_BASE_URL = 'https://trading-website-tan.vercel.app/api/user/';
 
 class UserService {
   getPublicContent() {

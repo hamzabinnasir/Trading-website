@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const API_URL = "http://localhost:8080/api/exchange";
+const API_URL = "https://trading-website-tan.vercel.app/api/exchange";
 
 class ExchangeService {
   getCurrentPrice(coin) {
