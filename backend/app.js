@@ -50,7 +50,7 @@ db.mongoose
         console.log("1. MongoDB Atlas Network Access (whitelist your IP)");
         console.log("2. Database user credentials");
         console.log("3. Internet connection");
-        process.exit(1);
+        // process.exit(1); // Allow server to start even if DB fails (for debugging)
     });
 
 // ✅ ADDITIONAL CORS HEADERS FOR PREFLIGHT REQUESTS
