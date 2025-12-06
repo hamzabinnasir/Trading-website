@@ -1,4 +1,32 @@
 // backend/app.js - CLEAN VERSION WITH DEBUG LOGS
+
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const dbConfig = require("./app/config/db.config.js");
+
+const app = express();
+
+// ✅ PROPER CORS CONFIGURATION
+const corsOptions = {
+    origin: "*", // Allow all origins for Vercel deployment
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-access-token', 'Origin', 'Accept']
+};
+
+app.use(cors(corsOptions));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
