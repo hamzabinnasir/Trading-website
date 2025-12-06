@@ -6,23 +6,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require("body-parser");
-const cors = require("cors");
-const dbConfig = require("./app/config/db.config.js");
-
-const app = express();
-
-// ✅ PROPER CORS CONFIGURATION
-const corsOptions = {
-    origin: "http://localhost:3000",
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'x-access-token', 'Origin', 'Accept']
-};
-
-app.use(cors(corsOptions));
-
-// ✅ BODY PARSER MIDDLEWARE
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
