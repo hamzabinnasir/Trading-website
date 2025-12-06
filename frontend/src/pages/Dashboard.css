@@ -1,0 +1,113 @@
+/* src/pages/Dashboard.css */
+
+/* Main Panel Style (To replace bg-dark) */
+.dashboard-panel {
+    /* Background and border matching Order Card */
+    background-color: #131722 !important; 
+    border: 1px solid #2a2e39 !important; 
+    border-radius: 4px !important;
+    color: #e0e0e0 !important;
+}
+
+/* Coin List Items - ListGroup.Item ke liye */
+.coin-list-item {
+    background-color: #131722 !important; /* Same as panel background */
+    border-color: #2a2e39 !important; /* Subtle divider */
+    color: #e0e0e0 !important;
+}
+
+/* Monospace font for Price values (Numbers) */
+.dashboard-number {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+.dashboard-title {
+    color: white !important;
+}
+
+/* Naya style for Active Navbar Button */
+.active-nav-button {
+    /* Active button par halka sa border ya shadow denge taake woh alag dikhe */
+    border: 2px solid yellow !important; /* Example Highlight */
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5) !important;
+}
+
+/* Optional: Navbar ka background color bhi fix kar sakte hain */
+#navbar {
+    background-color: #0b0e11 !important; /* Deep Dark Blue background */
+    border-bottom: 1px solid #2a2e39;
+}
+
+/* Add these styles to your Dashboard.css file */
+.total-value-display {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 50px;
+  border-radius: 15px;
+  border: 1px solid #2a2e39;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.summary-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #2a2e39;
+  transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.portfolio-stats {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #2a2e39;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.stat-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid #2a2e39;
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.dashboard-number {
+  color: #0ecb81 !important;
+  font-weight: bold;
+}
+
+/* Mobile Bottom Navigation Spacing */
+@media (max-width: 991px) {
+  .dashboard-panel {
+    margin-bottom: 80px; /* Space for bottom nav */
+  }
+  
+  .main-content {
+    padding-bottom: 70px;
+  }
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 768px) {
+  .dashboard-panel {
+    min-height: 250px !important;
+  }
+  
+  .coin-list-item {
+    padding: 12px 10px !important;
+  }
+  
+  .total-value-display {
+    padding: 20px 15px;
+  }
+  
+  .portfolio-stats {
+    padding: 15px;
+    max-height: 150px;
+  }
+}

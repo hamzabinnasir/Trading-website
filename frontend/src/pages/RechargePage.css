@@ -1,0 +1,105 @@
+/* frontend/src/pages/RechargePage.css */
+.recharge-page {
+  background-color: #0b0e11;
+  min-height: 100vh;
+  color: #eaecef;
+}
+
+.page-header h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.btn-recharge-now {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.quick-amount-btn {
+  border: 2px solid #2a2e39;
+  color: #848e9c;
+  transition: all 0.3s ease;
+}
+
+.quick-amount-btn:hover {
+  border-color: #4CAF50;
+  color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.recharge-table {
+  background-color: #131722;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.recharge-table th {
+  background-color: #1e2329;
+  color: #848e9c;
+  border: none;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.recharge-table td {
+  background-color: #131722;
+  color: #eaecef;
+  border-color: #2a2e39;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.recharge-table tr:hover td {
+  background-color: #1e2329;
+}
+
+.recharge-info-box {
+  background-color: #2a2e39;
+  border-radius: 8px;
+  border-left: 4px solid #4CAF50;
+}
+
+.recharge-info-box h6 {
+  color: #4CAF50;
+  margin-bottom: 8px;
+}
+
+/* Modal Styling */
+.modal-content {
+  background-color: #131722;
+  color: #eaecef;
+  border: 1px solid #2a2e39;
+}
+
+.modal-header {
+  background-color: #1e2329;
+  border-bottom: 1px solid #2a2e39;
+}
+
+.modal-title {
+  color: white;
+}
+
+.form-control, .form-select {
+  background-color: #2a2e39;
+  border: 1px solid #444;
+  color: white;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #2a2e39;
+  border-color: #4CAF50;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+.form-label {
+  color: #848e9c;
+  font-weight: 500;
+}
+
+.form-text {
+  color: #6c757d !important;
+}

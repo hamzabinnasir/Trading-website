@@ -1,0 +1,129 @@
+/* src/pages/Asset.css */
+
+/* Main Background and Container */
+.asset-container {
+  background-color: #0b0e11; /* Dashboard jaisa deep dark color */
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: #e0e0e0;
+  padding-bottom: 50px;
+}
+
+/* Header and Filter Styling */
+.page-header {
+  background-color: #0b0e11;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2e39; 
+  margin-bottom: 0;
+  color: white;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-filter {
+  color: #848e9c;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Tabs Styling (Matching Orders Page) */
+.tabs-header {
+  display: flex;
+  background-color: #131722; 
+  border-bottom: 1px solid #2a2e39;
+  margin-top: 20px;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 15px;
+  color: #848e9c; 
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.tab-item.active {
+  color: #76b900; /* Green highlight for Asset Tab */
+  font-weight: bold;
+  background-color: #1e2329;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #76b900; /* Green Underline */
+}
+
+/* Transaction List Styling */
+.asset-list {
+  padding: 10px 0;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.asset-card {
+  background-color: #131722; 
+  border: 1px solid #2a2e39; 
+  border-radius: 4px; 
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.label {
+  color: #848e9c; 
+  font-weight: 500;
+}
+
+.value {
+  color: #eaecef;
+  font-weight: 500;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace; /* Monospace for consistency */
+}
+
+/* Specific Colors */
+.status-text {
+    font-weight: bold;
+}
+.status-text.green { color: #0ecb81; } /* Agreed/Success */
+.status-text.red { color: #f6465d; } /* Rejected/Loss */
+
+.fund-amount { font-weight: bold; }
+.text-red { color: #f6465d !important; }
+.text-blue { color: #2c7df7 !important; } /* For negative amounts on Funds tab */
+.text-gray { color: #848e9c; }
+
+.card-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #444;
+}
+
+.empty-state {
+  color: #444;
+}

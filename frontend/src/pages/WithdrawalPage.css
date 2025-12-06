@@ -1,0 +1,139 @@
+/* frontend/src/pages/WithdrawalPage.css */
+.withdrawal-page {
+  background-color: #0b0e11;
+  min-height: 100vh;
+  color: #eaecef;
+}
+
+.page-header h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.btn-withdraw-now {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #1e2329, #2a2e39);
+  border: none;
+  color: white;
+}
+
+.balance-card .card-body {
+  padding: 20px;
+}
+
+.quick-amount-btn {
+  border: 2px solid #2a2e39;
+  color: #848e9c;
+  transition: all 0.3s ease;
+}
+
+.quick-amount-btn:hover {
+  border-color: #007bff;
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.quick-amount-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.withdrawal-table {
+  background-color: #131722;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.withdrawal-table th {
+  background-color: #1e2329;
+  color: #848e9c;
+  border: none;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.withdrawal-table td {
+  background-color: #131722;
+  color: #eaecef;
+  border-color: #2a2e39;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.withdrawal-table tr:hover td {
+  background-color: #1e2329;
+}
+
+.withdrawal-info-box {
+  background-color: #2a2e39;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.withdrawal-info-box h6 {
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.withdrawal-info-box ul {
+  color: #848e9c;
+  margin-bottom: 0;
+}
+
+.withdrawal-info-box li {
+  margin-bottom: 4px;
+}
+
+/* Modal Styling */
+.modal-content {
+  background-color: #131722;
+  color: #eaecef;
+  border: 1px solid #2a2e39;
+}
+
+.modal-header {
+  background-color: #1e2329;
+  border-bottom: 1px solid #2a2e39;
+}
+
+.modal-title {
+  color: white;
+}
+
+.form-control, .form-select {
+  background-color: #2a2e39;
+  border: 1px solid #444;
+  color: white;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #2a2e39;
+  border-color: #007bff;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-label {
+  color: #848e9c;
+  font-weight: 500;
+}
+
+.form-text {
+  color: #6c757d !important;
+}
+
+optgroup {
+  color: #848e9c;
+  font-weight: 500;
+}
+
+optgroup option {
+  color: #eaecef;
+  padding: 8px;
+}

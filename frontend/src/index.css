@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap");
+
+/* --- GLOBAL BASE STYLES --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #061125;
+  overflow-x: hidden; /* Horizontal scroll khatam karne ke liye */
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+/* --- CUSTOM HEIGHT UTILITIES (Desktop Default) --- */
+.h-90 { height: 90%; }
+.h-88 { height: 88%; }
+.h-60 { height: 60%; }
+.h-30 { height: 30%; }
+.h-28 { height: 28%; }
+.h-27_5 { height: 27.5%; }
+.h-15 { height: 15%; }
+.h-14_5 { height: 14.5%; }
+.h-12 { height: 12%; }
+.h-10 { height: 10%; }
+.h-9 { height: 9%; }
+.h-100 { height: 100%; }
+
+/* --- CUSTOM WIDTH UTILITIES --- */
+.w-95 { width: 95%; }
+.w-70 { width: 70%; }
+.w-45 { width: 45%; }
+.w-20 { width: 20%; }
+.w-15 { width: 15%; }
+.w-10 { width: 10%; }
+
+/* --- COLORS --- */
+.bg-dark { background-color: #131821 !important; }
+.bg-green { background-color: #28a745 !important; }
+.bg-red { background-color: #ef534f !important; }
+
+/* --- LAYOUT HELPERS --- */
+.main-content {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+}
+
+.z-100 { z-index: 100; }
+
+.jumbotron {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+/* ==========================================
+   🔥 GLOBAL RESPONSIVE FIX (MOBILE VIEW) 🔥
+   ========================================== */
+@media only screen and (max-width: 992px) {
+    
+    /* 1. Fixed Heights ko AUTO karein taake content scroll ho sakay */
+    .h-100, .h-90, .h-88, .h-60, .h-30, .h-28, .h-27_5, .h-15, .h-14_5, .h-12, .h-10, .h-9 {
+        height: auto !important;
+        min-height: auto !important;
+        margin-bottom: 15px; /* Boxes ke beech space */
+    }
+
+    /* 2. Rows ko stack karein (Upar Neechay) */
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 !important;
+        height: auto !important; /* Row height fix khatam */
+    }
+
+    /* 3. Main Content ko flexible banayein */
+    .main-content {
+        position: relative !important;
+        height: auto !important;
+        overflow-y: auto;
+    }
+
+    /* 4. Container Padding Adjustment */
+    .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* 5. Navbar Buttons Mobile Friendly */
+    .btn {
+        margin-bottom: 10px;
+        width: 100% !important; /* Mobile pa buttons full width */
+        margin-left: 0 !important;
+    }
+
+    /* 6. Specific Fix for Dashboard/Coin Panels */
+    .rounded {
+        min-height: 200px; /* Mobile par panels pichak na jayen */
+    }
+}

@@ -1,0 +1,193 @@
+/* frontend/src/pages/SiteMessages.css */
+.site-messages-page {
+  background-color: #0b0e11;
+  min-height: 100vh;
+  color: #eaecef;
+}
+
+.page-header h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.message-actions .unread-count {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+/* Filter Tabs */
+.filter-tabs .btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+/* Messages List */
+.message-item {
+  background-color: #131722;
+  border: none;
+  border-bottom: 1px solid #2a2e39;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message-item:hover {
+  background-color: #1e2329;
+}
+
+.message-item.unread {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-left: 4px solid #007bff;
+}
+
+.message-item:last-child {
+  border-bottom: none;
+}
+
+.message-icon {
+  font-size: 24px;
+  margin-top: 2px;
+}
+
+.message-title {
+  color: white;
+  font-weight: 600;
+}
+
+.message-preview {
+  color: #848e9c;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message-time {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.message-meta {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Empty State */
+.empty-state-icon {
+  font-size: 48px;
+  opacity: 0.5;
+}
+
+/* Modal Styling */
+.modal-content {
+  background-color: #131722;
+  color: #eaecef;
+  border: 1px solid #2a2e39;
+}
+
+.modal-header {
+  background-color: #1e2329;
+  border-bottom: 1px solid #2a2e39;
+  padding: 20px;
+}
+
+.modal-title {
+  color: white;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  background-color: #1e2329;
+  border-top: 1px solid #2a2e39;
+  padding: 15px 20px;
+}
+
+.message-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #2a2e39;
+}
+
+.message-body {
+  padding: 20px 0;
+  line-height: 1.6;
+}
+
+/* Card Styling */
+.card {
+  background-color: #131722;
+  border: 1px solid #2a2e39;
+  border-radius: 8px;
+}
+
+.card-header {
+  background-color: #1e2329;
+  border-bottom: 1px solid #2a2e39;
+  padding: 15px 20px;
+}
+
+.card-header h5 {
+  color: white;
+  margin: 0;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+/* Loading Spinner */
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Alert Styling */
+.alert {
+  border: none;
+  border-radius: 6px;
+  padding: 12px 15px;
+}
+
+.alert-info {
+  background: rgba(23, 162, 184, 0.2);
+  color: #17a2b8;
+  border-left: 4px solid #17a2b8;
+}
+
+/* Button Styling */
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-warning {
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+.btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  border-color: #007bff;
+}

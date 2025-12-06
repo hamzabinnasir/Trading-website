@@ -1,0 +1,381 @@
+/* src/pages/Coin.css */
+
+/* ==================================================
+   1. GRADIENT BUTTONS (Buy Up / Buy Down)
+   ================================================== */
+.btn-buy-up {
+  background: linear-gradient(135deg, #42c767 0%, #57b846 100%) !important;
+  box-shadow: 0 4px 15px rgba(87, 184, 70, 0.3);
+  color: white !important;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-buy-up:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(87, 184, 70, 0.4);
+}
+
+.btn-buy-down {
+  background: linear-gradient(135deg, #ff5f6d 0%, #ffc371 100%) !important;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+  color: white !important;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-buy-down:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+/* ==================================================
+   2. SIDE MENU (NAVIGATION DRAWER) - DARK THEME
+   ================================================== */
+.side-menu-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1040;
+    display: none;
+    backdrop-filter: blur(2px); 
+}
+.side-menu-overlay.open { display: block; }
+
+.side-menu {
+    position: fixed; top: 0; left: -300px; width: 85%; max-width: 300px; height: 100%;
+    background-color: #131821; 
+    z-index: 1050;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    display: flex; flex-direction: column;
+    border-right: 1px solid #2a2e39; 
+}
+.side-menu.open { left: 0; }
+
+.side-menu-header {
+    padding: 20px; font-size: 18px; font-weight: bold;
+    background-color: #0b0e11; 
+    color: white; 
+    text-align: center; 
+    border-bottom: 1px solid #2a2e39; 
+}
+
+.side-menu-table-header {
+    display: flex; justify-content: space-between;
+    padding: 10px 15px; 
+    background-color: #131821;
+    font-size: 12px; font-weight: bold; 
+    color: #848e9c; 
+    border-bottom: 1px solid #2a2e39;
+}
+
+.side-menu-list {
+    overflow-y: auto; flex: 1;
+    background-color: #131821;
+}
+
+/* Scrollbar Styling for Menu */
+.side-menu-list::-webkit-scrollbar {
+    width: 5px;
+}
+.side-menu-list::-webkit-scrollbar-thumb {
+    background: #2a2e39; 
+    border-radius: 5px;
+}
+
+.side-menu-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 10px; 
+    border-bottom: 1px solid #2a2e39; 
+    cursor: pointer; transition: background 0.2s;
+}
+
+.side-menu-item:hover, .side-menu-item:active { 
+    background-color: #2a2e39; 
+}
+
+.coin-info { display: flex; align-items: center; flex: 1; }
+.coin-info img { width: 24px; height: 24px; margin-right: 8px; }
+
+.coin-code { font-weight: bold; font-size: 14px; color: white; }
+.coin-price { flex: 1; text-align: center; font-size: 13px; font-weight: 500; color: white; }
+
+.coin-change { flex: 1; text-align: right; }
+.change-box {
+    display: inline-block; padding: 4px 8px; border-radius: 4px;
+    color: white; font-size: 12px; font-weight: bold; min-width: 60px; text-align: center;
+}
+.change-box.up { background-color: #0ecb81; } 
+.change-box.down { background-color: #f6465d; } 
+
+/* ==================================================
+   3. CHART WRAPPER (Global Defaults)
+   ================================================== */
+.chart-wrapper {
+    /* Base styles - Heights are handled in Media Queries below */
+    border: 2px solid #2a2e39 !important;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.chart-wrapper iframe {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+/* ==================================================
+   4. MARKET STATISTICS (Global/Desktop Layout)
+   ================================================== */
+.market-stats-container {
+  background-color: #131821;
+  border: 2px solid #2a2e39;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.market-price-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2e39;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.main-price-text {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  color: #0ecb81;
+}
+
+/* Grid Layout for Laptop View */
+.market-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.market-left-col {
+    width: 40%;
+    border-right: 1px solid #2a2e39;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.market-right-col {
+    width: 60%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+  gap: 8px;
+  font-size: 12px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-label {
+  color: #848e9c;
+}
+
+.stat-value {
+  color: #e0e0e0;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+}
+
+
+/* ==================================================
+   5. TIME SELECTION & MODAL STYLES
+   ================================================== */
+.time-selector-box {
+  background-color: #ffffff; 
+  border: 2px solid #e9ecef; 
+  border-radius: 10px; 
+  padding: 12px 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.time-text { font-size: 16px; font-weight: 700; color: #343a40; display: block; }
+.profit-text { font-size: 13px; font-weight: 600; color: #e74c3c; }
+
+.time-selector-box.active {
+  background-color: #57b846; 
+  border-color: #57b846;
+}
+.time-selector-box.active .time-text,
+.time-selector-box.active .profit-text { color: white !important; }
+
+.custom-input {
+  background-color: #f8f9fa !important;
+  border: 2px solid #e9ecef !important;
+  color: #333 !important; 
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.summary-row {
+  background: linear-gradient(to right, #fff3e0, #ffe0b2); 
+  color: #bf6900; 
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border: 1px solid #ffd599;
+}
+
+.dark-modal .modal-content { background-color: #131821; border: 2px solid #343a40; }
+.dark-modal .modal-body { background-color: #1a1f29 !important; }
+
+
+/* ==================================================
+   6. RESPONSIVE SIZING (DESKTOP VS MOBILE)
+   ================================================== */
+
+/* --- DESKTOP VIEW (Screens larger than 992px) --- */
+@media (min-width: 992px) {
+    /* Fixed large height for Desktop so it looks good on Laptop */
+    .chart-wrapper {
+        height: 650px !important;
+    }
+}
+
+/* --- MOBILE VIEW (Screens smaller than 992px) --- */
+@media only screen and (max-width: 992px) {
+
+    /* 1. Default elements hidden */
+    .mobile-top-stats, .mobile-trade-footer {
+        display: block; /* Show mobile elements */
+    }
+    .desktop-sidebar { display: none !important; }
+
+    /* 2. Row Layout */
+    .coin-main-row {
+        height: auto !important;
+        display: block;
+        overflow: visible;
+        padding-bottom: 70px;
+    }
+
+    /* 3. CHART SIZING FOR MOBILE - UPDATED */
+    .chart-col {
+        height: auto !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-bottom: 80px !important;
+    }
+    
+    .chart-wrapper {
+        /* FIXED PIXEL HEIGHT IS MANDATORY FOR TRADINGVIEW TIME AXIS TO SHOW */
+        height: 480px !important; 
+        border: none !important;
+        border-radius: 0 !important;
+    }
+
+    /* 4. Mobile Top Header Stats */
+    .mobile-top-stats {
+        background-color: #131821;
+        color: white;
+        padding: 10px 15px;
+        border-bottom: 1px solid #2a2e39;
+        margin-bottom: 0;
+    }
+
+    .mobile-nav-row {
+        display: flex; align-items: center; justify-content: space-between;
+        margin-bottom: 10px; border-bottom: 1px solid #2a2e39; padding-bottom: 5px;
+    }
+
+    .hamburger-btn {
+        background: none; border: 1px solid #444; color: white;
+        font-size: 20px; padding: 2px 8px; border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .mobile-stats-header { margin-bottom: 0; font-size: 16px; font-weight: bold; }
+    .mobile-stats-grid { display: flex; justify-content: space-between; }
+    .mobile-price-col { width: 40%; }
+    .mobile-main-price { font-size: 28px; font-weight: bold; line-height: 1.1; }
+    .mobile-label { font-size: 11px; color: #848e9c; }
+    .mobile-change-val { font-size: 14px; font-weight: 500; }
+
+    .mobile-details-col { width: 55%; font-size: 11px; }
+    .m-stat-row { display: flex; justify-content: space-between; margin-bottom: 3px; color: #e0e0e0; }
+    .m-stat-row span:first-child { color: #848e9c; }
+
+    /* 5. Sticky Footer Buttons */
+    .mobile-trade-footer {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 60px; /* Above Bottom Nav */
+        left: 0;
+        width: 100%;
+        background-color: #131821;
+        padding: 10px 15px;
+        z-index: 1000;
+        border-top: 2px solid #2a2e39;
+        box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+    }
+    .mobile-trade-footer .btn {
+        width: 48% !important;
+        border-radius: 4px;
+        padding: 12px 0;
+        font-size: 16px;
+        margin-bottom: 0 !important;
+    }
+
+    body { padding-bottom: 140px; }
+}
+
+/* Default Desktop hide mobile elements */
+@media (min-width: 993px) {
+    .mobile-top-stats, .mobile-trade-footer {
+        display: none !important;
+    }
+}
+/* Add this to your CSS file */
+/* .desktop-currency-selector {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.currency-dropdown {
+  background: #1e2329 !important;
+  border: 1px solid #2a2e39 !important;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.currency-dropdown-menu {
+  background: #1e2329 !important;
+  border: 1px solid #2a2e39 !important;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.currency-dropdown-item {
+  color: white !important;
+  padding: 10px 15px;
+}
+
+.currency-dropdown-item:hover {
+  background: #2a2e39 !important;
+} */
